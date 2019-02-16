@@ -1,0 +1,201 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="dist/boostrap-4.1.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="dist/highlight.js/default.min.css">
+  <!--<link rel="stylesheet" href="dist/fontawesome-5.7.2/css/all.css">-->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+  <div class="container">
+    <div id="footer">
+      <span id="footer-name">Michael Steiner</span>
+      <span id="footer-page">right</span>
+    </div>
+
+    <div class="page-container">
+      <div class="jumbotron">
+        <h1 class="display-4">Mermaid</h1>
+        <p class="lead">Graphen so einfach wie Markdown</p>
+        <hr class="my-4">
+        <p>Präsentiert von Michael Steiner</p>
+      </div>
+    </div>
+
+    <div class="page-container">
+        <h1>Gliederung</h1>
+        <div class="mermaid">
+            graph TD
+            overview[Übersicht]
+            Flussdiagramme
+            Sequenzdiagramme
+            Ganttdiagramme
+
+            overview --> Flussdiagramme
+            Flussdiagramme --> Sequenzdiagramme
+            Sequenzdiagramme --> Ganttdiagramme
+        </div>
+    </div>
+    <div class="page-container">
+      <ul>
+        <li>https://github.com/knsv/mermaid</li>
+        <li>Gestartet im November 2014</li>
+        <li>Ziel: </li>
+        <li>Ever wanted to simplify documentation and avoid heavy tools like visio when explaining your code?</li>
+        <li>This is why I came up with mermaid, a simple markdown-like script language for generating charts from text via javascript.</li>
+        <li>Umfang:</li>
+      </ul>
+    </div>
+
+    <div class="page-container">
+      <ul>
+        <li>Umfang:</li>
+        <li>Flussdiagramme</li>
+        <li>Gantt-Diagramme</li>
+        <li>Klassendiagramme</li>
+        <li>Git-Graphen</li>
+      </ul>
+    </div>
+
+    <div class="page-container">
+      <h2>Themes</h2>
+      <div id="example-theme-1"></div>
+
+      <button onclick="changeTheme(this)" data-mermaid-theme="default">default</button>
+      <button onclick="changeTheme(this)" data-mermaid-theme="forest">forest</button>
+      <button onclick="changeTheme(this)" data-mermaid-theme="dark">dark</button>
+      <button onclick="changeTheme(this)" data-mermaid-theme="neutral">neutral</button>
+    </div>
+
+    <div class="page-container">
+      <h1>Grapenausrichtung</h1>
+      <div id="page-1-1"></div>
+      <div id="page-1-2"></div>
+      <div id="page-1-3"></div>
+      <div id="page-1-4"></div>
+    </div>
+
+    <div class="page-container">
+      <h1>Knoten IDs</h1>
+      <div id="page-2-1"></div>
+      <div id="page-2-2"></div>
+    </div>
+
+    <div class="page-container">
+      <h1>Verbindungen zwischen Knoten</h1>
+      <div id="example-node-connection-1"></div>
+      <div id="example-node-connection-2"></div>
+      <div id="example-node-connection-3"></div>
+      <div id="example-node-connection-4"></div>
+      <div id="example-node-connection-5"></div>
+    </div>
+
+    <div class="page-container">
+      <h1>Subgraphen</h1>
+      <div id="example-subgraph-1"></div>
+
+    </div>
+
+    <div class="page-container">
+      <h1>Knoten-Typen</h1>
+      <div id="example-node-types-1"></div>
+      <div id="example-node-types-2"></div>
+      <div id="example-node-types-3"></div>
+      <div id="example-node-types-4"></div>
+    </div>
+
+    <div class="page-container">
+      <h1>Styling</h1>
+      <div id="example-styling-1"></div>
+
+      <ul>
+        <li>
+            Veränderung der Textfarbe nur per CSS möglich
+            <pre>
+            <code class="css">
+                #mermaidID .label {
+                    color: red;
+                }
+            </code>
+        </pre>
+        </li>
+      </ul>
+    </div>
+
+  <div class="page-container">
+      <h1>Ganttdiagram</h1>
+      <!--<div id="example-gantt-diagram-1"></div>-->
+      <div id="example-gantt-diagram-2"></div>
+
+  </div>
+
+    <div class="page-container">
+      <div class="row">
+        <h1>Klassendiagramme</h1>
+      </div>
+      <div id="example-class-diagram-1"></div>
+
+        <h2>Probleme</h2>
+        <ul>
+          <li>Nicht trivial, fehleranfällig beim Schreiben</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="page-container">
+      <h2>Probleme</h2>
+      <ul>
+        <li>Die Ausrichtung eines Subgraphs kann nicht geändert werden.</li>
+        <li>Die Textfarbe eines Knotens kann nicht geändert werden.</li>
+      </ul>
+    </div>
+
+    <div class="page-container">
+      <h2>Alternative</h2>
+      <ul>
+        <li>Flowchart.js (siehe https://support.typora.io/Draw-Diagrams-With-Markdown/)</li>
+      </ul>
+    </div>
+
+
+
+
+    <!--<div class="page-container">-->
+      <!--<h1>Git-Graph</h1>-->
+      <!--<div id="example-git-graph-1"></div>-->
+    <!--</div>-->
+  </div>
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>-->
+  <script>window.jQuery || document.write('<script src="dist/jquery/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="dist/boostrap-4.1.3-dist/js/bootstrap.min.js"></script>
+  <script src="dist/mermaid.min.js"></script>
+  <script src="dist/highlight.js/highlight.min.js"></script>
+  <script src="dist/scrollify/jquery.scrollify.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
