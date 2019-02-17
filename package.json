@@ -1,6 +1,6 @@
 {
   "name": "mermaid_presentation",
-  "version": "0.5",
+  "version": "0.5.0",
   "description": "Kurzpräsentation zu Mermaid",
   "main": "index.js",
   "directories": {
