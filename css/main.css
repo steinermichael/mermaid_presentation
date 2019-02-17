@@ -130,14 +130,29 @@ textarea {
 
     .page-container {
         padding: 10px 0;
+        width: 100%;
     }
 
 
+    .page-container h1 {
+        font-size: 30pt;
+    }
+
+    .page-container ul li {
+        font-size: 20pt;
+        line-height: 1.5;
+    }
 
 
+    .mermaid-scroll-container {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        max-height: 100%;
+    }
 
-
-
+    .theme-select-btn {
+        margin-right: 10px;
+    }
 
 
 

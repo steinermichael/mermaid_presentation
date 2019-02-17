@@ -38,67 +38,93 @@
     </div>
 
     <div class="page-container">
-        <div class="row">
-          <h1>Gliederung</h1>
-          <div class="mermaid">
-              graph TD
-              overview[Übersicht]
-              Flussdiagramme
-              Sequenzdiagramme
-              Ganttdiagramme
-
-              overview --> Flussdiagramme
-              Flussdiagramme --> Sequenzdiagramme
-              Sequenzdiagramme --> Ganttdiagramme
-          </div>
-        </div>
-    </div>
-    <div class="page-container">
+      <div class="row">
+        <h1>Gliederung</h1>
+      </div>
       <div class="row">
         <ul>
-          <li>https://github.com/knsv/mermaid</li>
+          <li>Projekt</li>
+          <li>Einführung anhand der Flussdiagramme</li>
+          <li>Andere Diagrammtypen</li>
+          <li>Alternativen</li>
+          <li>Integrationen</li>
+        </ul>
+      </div>
+    </div>
+
+    <!--<div class="page-container">-->
+      <!--<div class="row">-->
+        <!--<h1>Beispiel mit Vergleich</h1>-->
+      <!--</div>-->
+      <!--<div class="row">-->
+        <!--<div class="col-md-6">-->
+          <!--<img src="img/diagram-example-1.gif">-->
+          <!--<p>Quelle: http://www.ibim.de/pl+orga/3-3.htm</p>-->
+        <!--</div>-->
+        <!--<div class="col-md-6">-->
+          <!--<img src="img/diagram-example-1.png" style="height: 700px;">-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="page-container">-->
+      <!--<div class="row">-->
+        <!--<h1>Beispiel</h1>-->
+      <!--</div>-->
+      <!--<div style="max-height: 70%;">-->
+        <!--<div class="mermaid">-->
+          <!--graph TD-->
+          <!--1(1. Start)-->
+          <!--2[2. Hörer abnehmen]-->
+          <!--3[3. Wählen]-->
+          <!--4{4. meldet sich TN?}-->
+          <!--5[5. Gespräch führen]-->
+          <!--6[6. Hörer auflegen]-->
+          <!--7(7. Ende)-->
+          <!--8(8. Hörer auflegen)-->
+          <!--9{9. Gespräch aufschiebbar?}-->
+          <!--Rücksprung((Rücksprung zu Start))-->
+
+          <!--1 &ndash;&gt; 2-->
+          <!--2 &ndash;&gt; 3-->
+          <!--3 &ndash;&gt; 4-->
+          <!--4 &#45;&#45;ja&ndash;&gt; 5-->
+          <!--5 &ndash;&gt; 6-->
+          <!--6 &ndash;&gt; 7-->
+          <!--4 &#45;&#45;nein&ndash;&gt; 8-->
+          <!--8 &ndash;&gt; 9-->
+          <!--9 &#45;&#45;nein&ndash;&gt; Rücksprung-->
+          <!--9 &#45;&#45;ja&ndash;&gt; 7-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <div class="page-container">
+      <div class="row">
+        <h1>Das Mermaid-Projekt</h1>
+      </div>
+      <div class="row">
+        <ul>
           <li>Gestartet im November 2014</li>
-          <li>Ziel: </li>
-          <li>Ever wanted to simplify documentation and avoid heavy tools like visio when explaining your code?</li>
-          <li>This is why I came up with mermaid, a simple markdown-like script language for generating charts from text via javascript.</li>
-          <li>Umfang:</li>
+          <li>Einfache Skript-Sprache für Diagramme</li>
+          <li>Vorbild: Markdown</li>
         </ul>
       </div>
     </div>
 
     <div class="page-container">
       <div class="row">
-        <ul>
-          <li>Umfang:</li>
-          <li>Flussdiagramme</li>
-          <li>Gantt-Diagramme</li>
-          <li>Klassendiagramme</li>
-          <li>Git-Graphen</li>
-        </ul>
+        <h1>Ausrichtung</h1>
       </div>
+      <div id="example-graph-alignment-1"></div>
+      <div id="example-graph-alignment-2"></div>
     </div>
 
     <div class="page-container">
       <div class="row">
-        <h2>Themes</h2>
+        <h1>Gruppierung mit Subgraphen</h1>
       </div>
-      <div id="example-theme-1"></div>
-      <div class="row">
-        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary" data-mermaid-theme="default">default</button>
-        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary" data-mermaid-theme="forest">forest</button>
-        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary" data-mermaid-theme="dark">dark</button>
-        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary" data-mermaid-theme="neutral">neutral</button>
-      </div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Grapenausrichtung</h1>
-      </div>
-      <div id="page-1-1"></div>
-      <div id="page-1-2"></div>
-      <div id="page-1-3"></div>
-      <div id="page-1-4"></div>
+      <div id="example-subgraph-1"></div>
     </div>
 
     <div class="page-container">
@@ -107,24 +133,6 @@
       </div>
       <div id="page-2-1"></div>
       <div id="page-2-2"></div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Verbindungen zwischen Knoten</h1>
-      </div>
-      <div id="example-node-connection-1"></div>
-      <div id="example-node-connection-2"></div>
-      <div id="example-node-connection-3"></div>
-      <div id="example-node-connection-4"></div>
-      <div id="example-node-connection-5"></div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Subgraphen</h1>
-      </div>
-      <div id="example-subgraph-1"></div>
     </div>
 
     <div class="page-container">
@@ -139,22 +147,62 @@
 
     <div class="page-container">
       <div class="row">
-        <h1>Styling</h1>
+        <h1>Verbindungen zwischen Knoten</h1>
       </div>
-      <div id="example-styling-1"></div>
+      <div id="example-node-connection-1"></div>
+      <div id="example-node-connection-2"></div>
+      <div id="example-node-connection-3"></div>
       <div class="row">
         <ul>
-          <li>
-              Veränderung der Textfarbe nur per CSS möglich
-              <pre>
-              <code class="css">
-                  #mermaidID .label {
-                      color: red;
-                  }
-              </code>
-          </pre>
-          </li>
+          <li>Nicht verkettbar</li>
+          <li>Richtung nicht änderbar</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <div class="row">
+        <h1>Styling mit Klassen</h1>
+      </div>
+      <div class="row">
+        <ul>
+          <li>Definition von Klassen mit "classDef"</li>
+          <li>Zuweisung der Klasse mit "class"</li>
+          <!--<li>Veränderung der Textfarbe per CSS möglich</li>-->
+        </ul>
+      </div>
+      <div id="example-styling-1"></div>
+    </div>
+
+    <div class="page-container">
+      <div class="row">
+        <h1>Themes</h1>
+      </div>
+      <div id="example-theme-1"></div>
+      <div class="row">
+        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="default">default</button>
+        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="forest">forest</button>
+        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="dark">dark</button>
+        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="neutral">neutral</button>
+      </div>
+    </div>
+
+    <div class="page-container">
+      <div class="row">
+        <h1>Sequenzdiagramme</h1>
+      </div>
+      <div class="mermaid">
+        sequenceDiagram
+        participant Alice
+        participant Bob
+        Alice->John: Hello John, how are you?
+        loop Healthcheck
+        John->John: Fight against hypochondria
+        end
+        Note right of John: Rational thoughts <br/>prevail...
+        John-->Alice: Great!
+        John->Bob: How about you?
+        Bob-->John: Jolly good!
       </div>
     </div>
 
@@ -162,47 +210,98 @@
     <div class="row">
       <h1>Ganttdiagram</h1>
     </div>
-    <div id="example-gantt-diagram-2"></div>
+    <div class="mermaid">
+      gantt
+      dateFormat  YYYY-MM-DD
+
+      section A section
+      Completed task :done,    des1, 2014-01-06,2014-01-08
+      Active task    :active,  des2, 2014-01-09, 3d
+      Future task    :         des3, after des2, 5d
+      Future task2   :         des4, after des3, 5d
+    </div>
   </div>
 
     <div class="page-container">
       <div class="row">
-        <h1>Klassendiagramme</h1>
+        <h1>Klassendiagramme <span class="badge badge-warning">experimental</span></h1>
       </div>
-      <div id="example-class-diagram-1"></div>
-      <div class="row">
-        <h2>Probleme</h2>
-      </div>
-      <div class="row">
-        <ul>
-          <li>Nicht trivial, fehleranfällig beim Schreiben</li>
-        </ul>
-      </div>
-    </div>
-
-
-    <div class="page-container">
-      <div class="row">
-        <h2>Probleme</h2>
-      </div>
-      <div class="row">
-        <ul>
-          <li>Die Ausrichtung eines Subgraphs kann nicht geändert werden.</li>
-          <li>Die Textfarbe eines Knotens kann nicht geändert werden.</li>
-        </ul>
+      <div class="mermaid">
+        classDiagram
+        Class01 <|-- AveryLongClass : Cool
+        Class03 *-- Class04
+        Class05 o-- Class06
+        Class07 .. Class08
+        Class09 --> C2 : Where am i?
+        Class09 --* C3
+        Class09 --|> Class07
+        Class07 : equals()
+        Class07 : Object[] elementData
+        Class01 : size()
+        Class01 : int chimp
+        Class01 : int gorilla
+        Class08 <--> C2: Cool label
       </div>
     </div>
 
     <div class="page-container">
       <div class="row">
-        <h2>Alternative</h2>
+        <h1>Git-Graph <span class="badge badge-warning">experimental</span></h1>
+
+        <img src="img/gitgraph.png">
+      </div>
+    </div>
+
+    <!--<div class="page-container">-->
+      <!--<div class="row">-->
+        <!--<h2>Alternativen</h2>-->
+      <!--</div>-->
+      <!--<div class="row">-->
+        <!--<ul>-->
+          <!--<li>Flowchart.js (http://flowchart.js.org/)</li>-->
+          <!--<li>js-sequence-diagrams (https://bramp.github.io/js-sequence-diagrams/)</li>-->
+          <!--<li>Google-Chart-API</li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <div class="page-container">
+      <div class="row">
+        <h2>Integrationen</h2>
       </div>
       <div class="row">
         <ul>
-          <li>Flowchart.js (siehe https://support.typora.io/Draw-Diagrams-With-Markdown/)</li>
+          <li>In einigen Markdown-Editoren</li>
+          <li>Gitlab-Wiki</li>
+          <li>Gitbook-Plugin</li>
+          <li>Plugins für Visual Studio Code, Atom, Sublime Text</li>
+          <li>Remark.js</li>
         </ul>
       </div>
     </div>
+
+
+      <div class="page-container">
+        <div class="row">
+          <h2>Links</h2>
+        </div>
+        <div class="row">
+          <ul>
+            <li>Mermaid auf GibHub: https://github.com/knsv/mermaid</li>
+            <li>Dokumentation: https://mermaidjs.github.io/</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="page-container">
+        <div class="jumbotron">
+          <h1 class="display-4">Vielen Dank für die Aufmerksamkeit</h1>
+          <p class="lead">Fragen?</p>
+        </div>
+      </div>
+
+
+
   </div>
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>

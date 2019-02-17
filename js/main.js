@@ -1,7 +1,4 @@
-
 var maxPage = $(".page-container").length;
-
-
 
 function updateFooterPage() {
     console.log("updateFooterPage");
@@ -9,7 +6,6 @@ function updateFooterPage() {
     var currentPage = $.scrollify.currentIndex()+1;
     $("#footer-page").text(currentPage + "/" + maxPage);
 }
-
 
 function updateMermaidDivFromTextarea($textarea, themeName) {
     console.log("updateMermaidDivFromTextarea");
@@ -102,27 +98,16 @@ function changeTheme(clickedButton) {
 
 updateFooterPage();
 
-// page-1
+// example-graph-alignment
 addMermaidDiv(`
     graph LR
     A --> B`,
-    'page-1-1');
-
-addMermaidDiv(`
-    graph RL
-    A --> B`,
-    'page-1-2');
+    'example-graph-alignment-1');
 
 addMermaidDiv(`
     graph TB
     A --> B`,
-    'page-1-3');
-
-addMermaidDiv(`
-    graph BT
-    A --> B`,
-    'page-1-4');
-
+    'example-graph-alignment-2');
 
 //example-node-connections
 addMermaidDiv(`
@@ -142,19 +127,6 @@ addMermaidDiv(`
 
 addMermaidDiv(`
     graph LR
-    A --Übergang--> B
-    A --Übergang--> B`,
-    'example-node-connection-4');
-
-addMermaidDiv(`
-    graph LR
-    A -->|Übergang| B
-    A -->|Übergang| B`,
-    'example-node-connection-5');
-
-
-addMermaidDiv(`
-    graph LR
     A --> B
     `,
     'example-theme-1');
@@ -169,7 +141,8 @@ addMermaidDiv(`
     classDef useStroke stroke:#72a8ff,stroke-width:5px;
     class B useFill
     class C useStroke`,
-    'example-styling-1');
+    'example-styling-1',
+    12);
 
 // page-2
 addMermaidDiv(`
@@ -254,19 +227,7 @@ addMermaidDiv(`
     'example-class-diagram-1');
 
 
- addMermaidDiv(`
-    gantt
-    dateFormat  YYYY-MM-DD
-    title Adding GANTT diagram to mermaid
-    
-    section A section
-    Completed task :done,    des1, 2014-01-06,2014-01-08
-    Active task    :active,  des2, 2014-01-09, 3d
-    Future task    :         des3, after des2, 5d
-    Future task2   :         des4, after des3, 5d
-    `,
-     'example-gantt-diagram-2',
-     12);
+
 
 // addMermaidDiv(`
 //     gitGraph:
@@ -312,7 +273,7 @@ function addMermaidDiv(mermaidCode, testid, numberOfCols) {
     var numberOfNewlines =  mermaidCode.split(/\r\n|\r|\n/).length;
 
     tmpArray.push('   <div class="' + colClass + '">');
-    tmpArray.push('       <textarea rows="' + numberOfNewlines + '"class="mermaid-textarea">' + mermaidCodeWithoutLeadingSpaces + '</textarea>');
+    tmpArray.push('       <textarea spellcheck="false" rows="' + numberOfNewlines + '"class="mermaid-textarea">' + mermaidCodeWithoutLeadingSpaces + '</textarea>');
     tmpArray.push('   </div>');
     tmpArray.push('   <div class="' + colClass + '">');
     tmpArray.push('        <div class="mermaid" id="mermaid-' + testid + '">' + mermaidCode + '</div>');
