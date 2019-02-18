@@ -56,18 +56,47 @@ function updateMermaidDivFromTextarea($textarea, themeName) {
 
         console.log("mermaid config reset to", backupMermaidConfig);
     }
-
-
-
-
-
-    // var config = {startOnLoad:false, cloneCssStyles:false, leftMargin: 0, flowchart:{useMaxWidth:false, htmlLabels:true}};
-    // var config = {theme: 'forest'};
-    // mermaid.initialize(config);
 }
 
+$navIcon = $('#nav-icon');
+$navBar = $('#nav-bar');
 
 $( document ).ready(function() {
+
+    initNavBarContent();
+    initPageDataAttributes();
+
+    $navBar.on('mouseleave', function() {
+        $navBar.animate({
+            right: "-200px",
+        }, 500, function() {
+            $navIcon.attr('data-nav-bar-open', 'false');
+        });
+    });
+
+    $navIcon.on('click', function() {
+        $navIcon.attr('data-nav-bar-open', 'false');
+    });
+
+    $navIcon.hover(function() {
+        $navBar.animate({
+            right: "0",
+        }, 500, function() {
+            $navIcon.attr('data-hover-enabled', 'false');
+        });
+        $navIcon.attr('data-nav-bar-open', 'true');
+    });
+
+    //Click in NavBar will scroll to target-page
+    $(document).on('click', '.page-link', function () {
+        var pageTarget = $(this).attr('data-page-target');
+        var targetPageContainer = $('.page-container[data-page=' + pageTarget + ']').first();
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: targetPageContainer.offset().top
+        }, 200);
+    });
+
     $("textarea.mermaid-textarea").dblclick(function() {
 
         var $textarea = $(this);
@@ -84,6 +113,37 @@ $(function() {
         after: updateFooterPage,
     });
 });
+
+function initPageDataAttributes() {
+    $('.page-container').each(function(pageContainerIndex, pageContainer) {
+        $(pageContainer).attr('data-page', pageContainerIndex+1);
+    });
+}
+
+function initNavBarContent() {
+
+    var navBarItems = [];
+    navBarItems[3] = 'Das Mermaid-Projekt';
+    navBarItems[4] = 'Ausrichtung';
+    navBarItems[5] = 'Subgraphen';
+    navBarItems[6] = 'Knoten IDs';
+    navBarItems[7] = 'Knoten Typen';
+    navBarItems[8] = 'Verbindungen';
+    navBarItems[9] = 'Styling';
+    navBarItems[10] = 'Themes';
+    navBarItems[12] = 'Sequenzdiagramm';
+    navBarItems[13] = 'Ganttdiagramm';
+    navBarItems[14] = 'Git-Graph';
+    navBarItems[15] = 'Wo ist es nutzbar?';
+    navBarItems[16] = 'Fazit';
+
+    var navBarHtmlArray = [];
+    navBarItems.forEach(function(navBarItemDescription, navBarItemIndex) {
+        navBarHtmlArray.push('<li class="page-link" data-page-target="' + navBarItemIndex + '">' + navBarItemDescription + '</li>')
+    });
+
+    $navBar.html("<ul>" + navBarHtmlArray.join('') + "</ul>");
+}
 
 function changeTheme(clickedButton) {
     var newThemeName = $(clickedButton).attr("data-mermaid-theme");
