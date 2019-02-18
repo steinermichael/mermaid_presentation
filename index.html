@@ -2,316 +2,274 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="node_modules/highlight.js/styles/default.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/highlight.js/styles/default.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
 
-  <div class="container">
+<div class="container">
     <div id="footer">
-      <span id="footer-name">Michael Steiner</span>
-      <span id="footer-page">right</span>
+        <span id="footer-name">Michael Steiner</span>
+        <span id="footer-page">right</span>
     </div>
 
     <div class="page-container">
-      <div class="jumbotron">
-        <h1 class="display-4">Mermaid</h1>
-        <p class="lead">Graphen so einfach wie Markdown</p>
-        <hr class="my-4">
-        <p>Präsentiert von Michael Steiner</p>
-      </div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Gliederung</h1>
-      </div>
-      <div class="row">
-        <ul>
-          <li>Projekt</li>
-          <li>Einführung anhand der Flussdiagramme</li>
-          <li>Andere Diagrammtypen</li>
-          <li>Alternativen</li>
-          <li>Integrationen</li>
-        </ul>
-      </div>
-    </div>
-
-    <!--<div class="page-container">-->
-      <!--<div class="row">-->
-        <!--<h1>Beispiel mit Vergleich</h1>-->
-      <!--</div>-->
-      <!--<div class="row">-->
-        <!--<div class="col-md-6">-->
-          <!--<img src="img/diagram-example-1.gif">-->
-          <!--<p>Quelle: http://www.ibim.de/pl+orga/3-3.htm</p>-->
-        <!--</div>-->
-        <!--<div class="col-md-6">-->
-          <!--<img src="img/diagram-example-1.png" style="height: 700px;">-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="page-container">-->
-      <!--<div class="row">-->
-        <!--<h1>Beispiel</h1>-->
-      <!--</div>-->
-      <!--<div style="max-height: 70%;">-->
-        <!--<div class="mermaid">-->
-          <!--graph TD-->
-          <!--1(1. Start)-->
-          <!--2[2. Hörer abnehmen]-->
-          <!--3[3. Wählen]-->
-          <!--4{4. meldet sich TN?}-->
-          <!--5[5. Gespräch führen]-->
-          <!--6[6. Hörer auflegen]-->
-          <!--7(7. Ende)-->
-          <!--8(8. Hörer auflegen)-->
-          <!--9{9. Gespräch aufschiebbar?}-->
-          <!--Rücksprung((Rücksprung zu Start))-->
-
-          <!--1 &ndash;&gt; 2-->
-          <!--2 &ndash;&gt; 3-->
-          <!--3 &ndash;&gt; 4-->
-          <!--4 &#45;&#45;ja&ndash;&gt; 5-->
-          <!--5 &ndash;&gt; 6-->
-          <!--6 &ndash;&gt; 7-->
-          <!--4 &#45;&#45;nein&ndash;&gt; 8-->
-          <!--8 &ndash;&gt; 9-->
-          <!--9 &#45;&#45;nein&ndash;&gt; Rücksprung-->
-          <!--9 &#45;&#45;ja&ndash;&gt; 7-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Das Mermaid-Projekt</h1>
-      </div>
-      <div class="row">
-        <ul>
-          <li>Gestartet im November 2014</li>
-          <li>Einfache Skript-Sprache für Diagramme</li>
-          <li>Vorbild: Markdown</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Ausrichtung</h1>
-      </div>
-      <div id="example-graph-alignment-1"></div>
-      <div id="example-graph-alignment-2"></div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Gruppierung mit Subgraphen</h1>
-      </div>
-      <div id="example-subgraph-1"></div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Knoten IDs</h1>
-      </div>
-      <div id="page-2-1"></div>
-      <div id="page-2-2"></div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Knoten-Typen</h1>
-      </div>
-      <div id="example-node-types-1"></div>
-      <div id="example-node-types-2"></div>
-      <div id="example-node-types-3"></div>
-      <div id="example-node-types-4"></div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Verbindungen zwischen Knoten</h1>
-      </div>
-      <div id="example-node-connection-1"></div>
-      <div id="example-node-connection-2"></div>
-      <div id="example-node-connection-3"></div>
-      <div class="row">
-        <ul>
-          <li>Nicht verkettbar</li>
-          <li>Richtung nicht änderbar</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Styling mit Klassen</h1>
-      </div>
-      <div class="row">
-        <ul>
-          <li>Definition von Klassen mit "classDef"</li>
-          <li>Zuweisung der Klasse mit "class"</li>
-          <!--<li>Veränderung der Textfarbe per CSS möglich</li>-->
-        </ul>
-      </div>
-      <div id="example-styling-1"></div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Themes</h1>
-      </div>
-      <div id="example-theme-1"></div>
-      <div class="row">
-        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="default">default</button>
-        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="forest">forest</button>
-        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="dark">dark</button>
-        <button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="neutral">neutral</button>
-      </div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Sequenzdiagramme</h1>
-      </div>
-      <div class="mermaid">
-        sequenceDiagram
-        participant Alice
-        participant Bob
-        Alice->John: Hello John, how are you?
-        loop Healthcheck
-        John->John: Fight against hypochondria
-        end
-        Note right of John: Rational thoughts <br/>prevail...
-        John-->Alice: Great!
-        John->Bob: How about you?
-        Bob-->John: Jolly good!
-      </div>
-    </div>
-
-  <div class="page-container">
-    <div class="row">
-      <h1>Ganttdiagram</h1>
-    </div>
-    <div class="mermaid">
-      gantt
-      dateFormat  YYYY-MM-DD
-
-      section A section
-      Completed task :done,    des1, 2014-01-06,2014-01-08
-      Active task    :active,  des2, 2014-01-09, 3d
-      Future task    :         des3, after des2, 5d
-      Future task2   :         des4, after des3, 5d
-    </div>
-  </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Klassendiagramme <span class="badge badge-warning">experimental</span></h1>
-      </div>
-      <div class="mermaid">
-        classDiagram
-        Class01 <|-- AveryLongClass : Cool
-        Class03 *-- Class04
-        Class05 o-- Class06
-        Class07 .. Class08
-        Class09 --> C2 : Where am i?
-        Class09 --* C3
-        Class09 --|> Class07
-        Class07 : equals()
-        Class07 : Object[] elementData
-        Class01 : size()
-        Class01 : int chimp
-        Class01 : int gorilla
-        Class08 <--> C2: Cool label
-      </div>
-    </div>
-
-    <div class="page-container">
-      <div class="row">
-        <h1>Git-Graph <span class="badge badge-warning">experimental</span></h1>
-
-        <img src="img/gitgraph.png">
-      </div>
-    </div>
-
-    <!--<div class="page-container">-->
-      <!--<div class="row">-->
-        <!--<h2>Alternativen</h2>-->
-      <!--</div>-->
-      <!--<div class="row">-->
-        <!--<ul>-->
-          <!--<li>Flowchart.js (http://flowchart.js.org/)</li>-->
-          <!--<li>js-sequence-diagrams (https://bramp.github.io/js-sequence-diagrams/)</li>-->
-          <!--<li>Google-Chart-API</li>-->
-        <!--</ul>-->
-      <!--</div>-->
-    <!--</div>-->
-
-    <div class="page-container">
-      <div class="row">
-        <h2>Integrationen</h2>
-      </div>
-      <div class="row">
-        <ul>
-          <li>In einigen Markdown-Editoren</li>
-          <li>Gitlab-Wiki</li>
-          <li>Gitbook-Plugin</li>
-          <li>Plugins für Visual Studio Code, Atom, Sublime Text</li>
-          <li>Remark.js</li>
-        </ul>
-      </div>
-    </div>
-
-
-      <div class="page-container">
-        <div class="row">
-          <h2>Links</h2>
-        </div>
-        <div class="row">
-          <ul>
-            <li>Mermaid auf GibHub: https://github.com/knsv/mermaid</li>
-            <li>Dokumentation: https://mermaidjs.github.io/</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="page-container">
         <div class="jumbotron">
-          <h1 class="display-4">Vielen Dank für die Aufmerksamkeit</h1>
-          <p class="lead">Fragen?</p>
+            <h1 class="display-4">Mermaid</h1>
+            <p class="lead">Diagramme im Stil von Markdown</p>
+            <hr class="my-4">
+            <p>Präsentiert von Michael Steiner</p>
         </div>
-      </div>
+    </div>
 
+    <div class="page-container">
+        <div class="row">
+            <h1>Gliederung</h1>
+        </div>
+        <div class="row">
+            <ul>
+                <li>Projekt</li>
+                <li>Einführung anhand der Flussdiagramme</li>
+                <li>Andere Diagrammtypen</li>
+                <li>Wo ist es nutzbar?</li>
+                <li>Fazit</li>
+            </ul>
+        </div>
+    </div>
 
+    <div class="page-container">
+        <div class="row">
+            <h1>Das Mermaid-Projekt</h1>
+        </div>
+        <div class="row">
+            <ul>
+                <li>Gestartet im November 2014</li>
+                <li>Einfache Skript-Sprache für Diagramme</li>
+                <li>Vorbild Markdown</li>
+                <li>Ausgabeformat SVG</li>
+                <li>MIT Lizenz</li>
+            </ul>
+        </div>
+    </div>
 
-  </div>
+    <div class="page-container">
+        <div class="row">
+            <h1>Ausrichtung</h1>
+        </div>
+        <div id="example-graph-alignment-1"></div>
+        <div id="example-graph-alignment-2"></div>
+    </div>
 
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\/script>')</script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="node_modules/mermaid/dist/mermaid.min.js"></script>
-  <script src="node_modules/highlight.js/lib/highlight.js"></script>
-  <script src="node_modules/jquery-scrollify/jquery.scrollify.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+    <div class="page-container">
+        <div class="row">
+            <h1>Gruppierung mit Subgraphen</h1>
+        </div>
+        <div id="example-subgraph-1"></div>
+        <div class="row">
+            <ul>
+                <li>Definition von Knoten in einem subgraph-Block</li>
+                <li>Ausrichtung nicht anpassbar</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Knoten IDs</h1>
+        </div>
+        <div id="page-2-1"></div>
+        <div id="page-2-2"></div>
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Knoten-Typen</h1>
+        </div>
+        <div id="example-node-types-1"></div>
+        <div id="example-node-types-2"></div>
+        <div id="example-node-types-3"></div>
+        <div id="example-node-types-4"></div>
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Verbindungen zwischen Knoten</h1>
+        </div>
+        <div id="example-node-connection-1"></div>
+        <div id="example-node-connection-2"></div>
+        <div id="example-node-connection-3"></div>
+        <div class="row">
+            <ul>
+                <li>Nicht verkettbar</li>
+                <li>Richtung nicht änderbar</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Styling mit Klassen</h1>
+        </div>
+        <div class="row">
+            <ul>
+                <li>Definition von Klassen mit "classDef"</li>
+                <li>Zuweisung der Klasse mit "class"</li>
+                <!--<li>Veränderung der Textfarbe per CSS möglich</li>-->
+            </ul>
+        </div>
+        <div id="example-styling-1"></div>
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Themes</h1>
+        </div>
+        <div id="example-theme-1"></div>
+        <div class="row">
+            <h3>Mitgelieferte Themes</h3>
+        </div>
+        <div class="row">
+            <ul>
+                <li><button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="default">default</button></li>
+                <li><button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="forest">forest</button></li>
+                <li><button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="dark">dark</button></li>
+                <li><button onclick="changeTheme(this)" type="button" class="btn btn-outline-secondary theme-select-btn" data-mermaid-theme="neutral">neutral</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Flussdiagramm Beispiel</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/diagram-example-1.gif">
+                <p>Quelle: http://www.ibim.de/pl+orga/3-3.htm</p>
+            </div>
+            <div class="col-md-6">
+                <img src="img/diagram-example-1.png" style="height: 500px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Sequenzdiagramme</h1>
+        </div>
+        <div class="mermaid">
+            sequenceDiagram
+            participant Alice
+            participant Bob
+            Alice->John: Hello John, how are you?
+            loop Healthcheck
+            John->John: Fight against hypochondria
+            end
+            Note right of John: Rational thoughts <br/>prevail...
+            John-->Alice: Great!
+            John->Bob: How about you?
+            Bob-->John: Jolly good!
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Ganttdiagramme</h1>
+        </div>
+        <div class="mermaid">
+            gantt
+            dateFormat  YYYY-MM-DD
+
+            section A section
+            Completed task :done,    des1, 2014-01-06,2014-01-08
+            Active task    :active,  des2, 2014-01-09, 3d
+            Future task    :         des3, after des2, 5d
+            Future task2   :         des4, after des3, 5d
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Git-Graph <span class="badge badge-warning">experimental</span></h1>
+
+            <img src="img/gitgraph.png">
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Wo ist es nutzbar?</h1>
+        </div>
+        <div class="row">
+            <ul>
+                <li>Markdown-Editoren</li>
+                <li>Gitlab-Wiki</li>
+                <li>Gitbook-Plugin</li>
+                <li>Plugins für Visual Studio Code, Atom, Sublime Text</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Fazit</h1>
+        </div>
+        <div class="row">
+            <ul>
+                <li>Einfach erstellbar und änderbar</li>
+                <li>Einige Diagrammtypen</li>
+                <li>Styling möglich</li>
+                <li>Layout nicht direkt veränderbar</li>
+                <li>Manuell erstellte Diagrammme sind schöner</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="row">
+            <h1>Links</h1>
+        </div>
+        <div class="row">
+            <ul>
+                <li>Mermaid auf GitHub:<br>https://github.com/knsv/mermaid</li>
+                <li>Dokumentation:<br>https://mermaidjs.github.io</li>
+                <li>Live-Editor:<br>https://mermaidjs.github.io/mermaid-live-editor</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="jumbotron">
+            <h1 class="display-4">Vielen Dank für die Aufmerksamkeit</h1>
+            <p class="lead">Fragen?</p>
+        </div>
+    </div>
+</div>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/mermaid/dist/mermaid.min.js"></script>
+<script src="node_modules/highlight.js/lib/highlight.js"></script>
+<script src="node_modules/jquery-scrollify/jquery.scrollify.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

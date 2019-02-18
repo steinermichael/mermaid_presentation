@@ -202,7 +202,7 @@ addMermaidDiv(`
 
 addMermaidDiv(`
     graph LR
-    subgraph Subgraph B
+    subgraph Gruppe
     B
     end
     
